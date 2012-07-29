@@ -1,0 +1,84 @@
+;PYCAM-META-DATA: Filename: /home/matt/Documents/delta-cnc/makerfaire/circle.dxf
+;PYCAM-META-DATA: Timestamp: 2012-07-29 09:22:40.662140
+;PYCAM-META-DATA: Version: 0.5.1
+;Estimated machine time: 1 minutes
+G40 (disable tool radius compensation)
+G49 (disable tool length compensation)
+G80 (cancel modal motion)
+G54 (select coordinate system 1)
+G90 (disable incremental moves)
+G21 (metric)
+G61 (exact path mode)
+F200.00000
+S1000.00000
+;PYCAM_TOOLPATH_SETTINGS: START
+;[Bounds]
+;maxz = 0.0
+;maxx = 35.5
+;maxy = 25.5
+;minx = -35.5
+;miny = -45.5
+;minz = 0.0
+;
+;[Tool]
+;torus_radius = 0.25
+;speed = 1000.0
+;shape = SphericalCutter
+;tool_radius = 0.5
+;feedrate = 200.0
+;
+;[Process]
+;engrave_offset = 0.0
+;step_down = 1.0
+;generator = EngraveCutter
+;postprocessor = SimpleCutter
+;overlap_percent = 0
+;milling_style = conventional
+;material_allowance = 0.0
+;pocketing_type = none
+;path_direction = x
+;
+;PYCAM_TOOLPATH_SETTINGS: END
+T3 M6
+G0 Z25.0000
+M3 (start spindle)
+G04 P3 (wait for 3 seconds)
+ X30.0000 Y-10.0000
+G1 Z0.0000
+ X29.4236 Y-15.8527
+ X27.7164 Y-21.4805
+ X24.9441 Y-26.6671
+ X21.2132 Y-31.2132
+ X16.6671 Y-34.9441
+ X11.4805 Y-37.7164
+ X5.8527 Y-39.4236
+ X-0.0000 Y-40.0000
+ X-5.8527 Y-39.4236
+ X-11.4805 Y-37.7164
+ X-16.6671 Y-34.9441
+ X-21.2132 Y-31.2132
+ X-24.9441 Y-26.6671
+ X-27.7164 Y-21.4805
+ X-29.4236 Y-15.8527
+ X-30.0000 Y-10.0000
+ X-29.4236 Y-4.1473
+ X-27.7164 Y1.4805
+ X-24.9441 Y6.6671
+ X-21.2132 Y11.2132
+ X-16.6671 Y14.9441
+ X-11.4805 Y17.7164
+ X-5.8527 Y19.4236
+ X0.0000 Y20.0000
+ X5.8527 Y19.4236
+ X11.4805 Y17.7164
+ X16.6671 Y14.9441
+ X21.2132 Y11.2132
+ X24.9441 Y6.6671
+ X27.7164 Y1.4805
+ X29.4236 Y-4.1473
+ X30.0000 Y-10.0000
+G0 Z25.0000
+M5 (stop spindle)
+G04 P3 (wait for 3 seconds)
+G0 Z25.0000
+M2 (end program)
